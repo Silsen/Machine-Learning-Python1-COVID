@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 plt.rcParams.update(plt.rcParamsDefault)
 
 # Read relevant columns from data and filter out rows with nan values.
-data = pd.read_csv(r'C:\Users\Asger\Desktop\owid-covid-data.csv')
+data = pd.read_csv(r'covid-data.csv')
 data = data.drop_duplicates(subset='iso_code', keep = 'last')
 data = data[['iso_code', 'continent', 'total_cases_per_million', 'total_deaths_per_million', 
              'population', 'population_density', 'median_age', 'gdp_per_capita', 'human_development_index',
