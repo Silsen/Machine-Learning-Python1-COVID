@@ -30,7 +30,7 @@ ax[0,0].set(ylabel='total_deaths_per_million', xlabel='gdp_per_capita')
 ax[0,1].set(ylabel='total_deaths_per_million', xlabel='diabetes_prevalence')
 ax[1,0].set(ylabel='total_deaths_per_million', xlabel='population_density')
 ax[1,1].set(ylabel='total_deaths_per_million', xlabel='total_cases_per_million')
-figscat.savefig(r'C:\Users\Asger\Desktop\ML_proj1plots\correlation.eps', format='eps', dpi=1000)
+figscat.savefig(r'C:\Users\Andreas\Desktop\ML_proj1plots\correlation.eps', format='eps', dpi=1000)
 
 
 standardized_data = (data_numbers-data_numbers.mean())/data_numbers.std()
@@ -39,7 +39,7 @@ standardized_data = (data_numbers-data_numbers.mean())/data_numbers.std()
 fig = plt.figure()
 standardized_data.boxplot(fontsize = 8)
 plt.xticks(rotation=70)
-fig.savefig(r'C:\Users\Asger\Desktop\ML_proj1plots\box.eps', format='eps', dpi=1000)
+fig.savefig(r'C:\Users\Andreas\Desktop\ML_proj1plots\box.eps', format='eps', dpi=1000)
 
 # Histograms to check for normal distribution
 fig0, ax = plt.subplots(3,3)
@@ -62,7 +62,7 @@ ax[1,2].set(title = 'gdp_per_capita')
 ax[2,0].set(title = 'human_development_index')
 ax[2,1].set(title = 'life_expectancy')
 ax[2,2].set(title = 'diabetes_prevalence')
-fig0.savefig(r'C:\Users\Asger\Desktop\ML_proj1plots\hist.eps', format='eps', dpi=1000)
+fig0.savefig(r'C:\Users\Andreas\Desktop\ML_proj1plots\hist.eps', format='eps', dpi=1000)
 
 # SVD
 u,s,v = np.linalg.svd(standardized_data, full_matrices = True)
@@ -74,7 +74,7 @@ figPCA1 = plt.figure()
 plt.plot(variationFracSum)
 plt.xlabel('Number of PCA components')
 plt.ylabel('Amount of variation explained. Scale = 0-1')
-figPCA1.savefig(r'C:\Users\Asger\Desktop\ML_proj1plots\PCA1.eps', format='eps', dpi=1000)
+figPCA1.savefig(r'C:\Users\Andreas\Desktop\ML_proj1plots\PCA1.eps', format='eps', dpi=1000)
 
 # The 2 first Principal directions
 v_1 = v[0,:]
@@ -88,7 +88,7 @@ figPCA2 = plt.figure()
 plt.scatter(proj1,proj2)
 plt.xlabel('PCA1')
 plt.ylabel('PCA2')
-figPCA2.savefig(r'C:\Users\Asger\Desktop\ML_proj1plots\PCA2.eps', format='eps', dpi=1000)
+figPCA2.savefig(r'C:\Users\Andreas\Desktop\ML_proj1plots\PCA2.eps', format='eps', dpi=1000)
 
 
 
